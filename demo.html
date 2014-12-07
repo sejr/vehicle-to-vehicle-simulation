@@ -14,7 +14,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://sjr.io/networking/js/bootstrap-slider.js"></script>
         <script src="http://sjr.io/networking/js/app.js"></script>
-
+        <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+        <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
         <title>Emergency Broadcast Demonstration</title>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,13 +55,47 @@
                     Below, you will see multiple sliders. These correspond to data that would normally be collected by sensors in the vehicle and on devices such as your smart watch. For the sake of this simulation, we allow you to manipulate these parameters and set custom thresholds. Appropriate alerts will be generated when these thresholds are crossed.
                 </p>
             </div>
+
+            <div class="row">
+
+                <div class="col-md-12">
+                    <div class="slider shor"></div>
+                    <div class="slider shor slider-success"></div>
+                    <div class="slider shor slider-material-pink"></div>
+                </div>
+
+            </div>
         
         </div> <!-- /container -->
         <!-- End of Page-->
-        <script src="js/bootstrap.min.js"></script>
+        <script src="http://sjr.io/networking/js/bootstrap.min.js"></script>
         <script src="/socket.io/socket.io.js"></script>
         <script>
             var socket = io();
+        </script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/noUiSlider/6.2.0/jquery.nouislider.min.js"></script>
+        <script>
+            $(function() {
+                $.material.init();
+                $(".shor").noUiSlider({
+                    start: 40,
+                    connect: "lower",
+                    range: {
+                        min: 0,
+                        max: 100
+                    }
+                });
+
+                $(".svert").noUiSlider({
+                    orientation: "vertical",
+                    start: 40,
+                    connect: "lower",
+                    range: {
+                        min: 0,
+                        max: 100
+                    }
+                });
+            });
         </script>
     </body>
 </html>
