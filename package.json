@@ -1,0 +1,8 @@
+{
+  "name": "SCAP",
+  "version": "0.0.1",
+  "description": "ECCS 3631 final project",
+  "dependencies": {
+    "express": "^4.10.2"
+  }
+}

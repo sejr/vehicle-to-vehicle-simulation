@@ -1,0 +1,16 @@
+body {
+  padding-top: 100px;
+  background: rgba(0,0,0,.02) !important;
+  font-size: 16px !important;
+  padding-bottom: 100px;
+}
+
+.jumbotron {
+  background: rgba(0,0,0,0) !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+li {
+  font-size: 16px !important;
+}
