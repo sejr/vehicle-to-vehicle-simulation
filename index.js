@@ -22,7 +22,7 @@ io.on('connection', function(socket){
   });
   socket.on('alert', function(msg){
   	console.log('An alert was emitted: ' + msg);
-  	io.emit('alert', msg);
+  	socket.broadcast.emit('alert', msg);
   });
 });
 
