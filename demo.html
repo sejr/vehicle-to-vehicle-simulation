@@ -45,7 +45,7 @@
                 </div>
             </nav>
             <div class="container">
-                <h1 class="header page-header">Demo</h1>
+                <h1 class="header page-header">Demo <small><span id="userCount"></span></small></h1>
                 <p class="lead muted">
                 Below, you will see multiple sliders. These correspond to data that would normally be collected by sensors in the vehicle and on devices such as your smart watch. For the sake of this simulation, we allow you to manipulate these parameters and set custom thresholds. Appropriate alerts will be generated when these thresholds are crossed.
                 </p>
@@ -149,6 +149,13 @@
 
             <script>
                 var socket = io();
+                var users = 0;
+                console.log(users);
+                setInterval(function(){
+                    
+                    $('#userCount').load('/test');
+
+                }, 100);
 
                 var bac_threshold = 0.05;
                 var hr_threshold_low = 60;
@@ -200,7 +207,7 @@
                         $.snackbar({content: "Check your battery (high voltage)."});
                     }
 
-                },2000);
+                },10000);
 
                 socket.on('alert', function(msg){
                     $.snackbar({content: msg});
