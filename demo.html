@@ -41,178 +41,178 @@
                         <li><a href="/"><span class="ion-help-buoy" aria-hidden="true"></span>&nbsp; About</a></li>
                         <li class="active"><a href="/demo"><span class="ion-settings" aria-hidden="true"></span>&nbsp; Demo</a></li>
                     </ul>
-                    </div><!--/.nav-collapse -->
-                </div>
-            </nav>
-            <div class="container">
-                <h1 class="header page-header">Demo <small><span id="userCount"></span></small></h1>
-                <p class="lead muted">
-                Below, you will see multiple sliders. These correspond to data that would normally be collected by sensors in the vehicle and on devices such as your smart watch. For the sake of this simulation, we allow you to manipulate these parameters and set custom thresholds. Appropriate alerts will be generated when these thresholds are crossed.
-                </p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1 class="header page-header">Driver</h1>
-                        <div class="sample1">
-                            <h3>Blood Alcohol <small><span id="bac-reading"></span>%</small></h3>
-                            <div id="bac-slider" class="slider shor slider-material-pink"></div>
-                            <span id="bac-reading"></span>
-                            <script>
-                                $('#bac-slider').noUiSlider({
-                                    start: 0,
-                                    step: 0.001,
-                                    connect: "lower",
-                                    range: {
-                                        'min': 0,
-                                        'max': 0.3
-                                    },
-                                    format: wNumb({
-                                        decimals: 3
-                                    })
-                                });
-                            </script>
-                            <script>
-                                $('#bac-slider').Link('lower').to($('#bac-reading'));
-                            </script>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            <h1 class="header page-header">Demo <small><span id="userCount"></span></small></h1>
+            <p class="lead muted">
+            Below, you will see multiple sliders. These correspond to data that would normally be collected by sensors in the vehicle and on devices such as your smart watch. For the sake of this simulation, we allow you to manipulate these parameters and set custom thresholds. Appropriate alerts will be generated when these thresholds are crossed.
+            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="header page-header">Driver</h1>
+                    <div class="sample1">
+                        <h3>Blood Alcohol <small><span id="bac-reading"></span>%</small></h3>
+                        <div id="bac-slider" class="slider shor slider-material-pink"></div>
+                        <span id="bac-reading"></span>
+                        <script>
+                            $('#bac-slider').noUiSlider({
+                                start: 0,
+                                step: 0.001,
+                                connect: "lower",
+                                range: {
+                                    'min': 0,
+                                    'max': 0.3
+                                },
+                                format: wNumb({
+                                    decimals: 3
+                                })
+                            });
+                        </script>
+                        <script>
+                            $('#bac-slider').Link('lower').to($('#bac-reading'));
+                        </script>
 
-                            <h3>Heart Rate <small><span id="heart-rate-reading"></span> BPM</small></h3>
-                            <div id="heart-rate-slider" class="slider shor slider-material-purple"></div>
-                            <span id="heart-rate-reading"></span>
-                            <script>
-                                $('#heart-rate-slider').noUiSlider({
-                                    start: 100,
-                                    connect: "lower",
-                                    step: 1,
-                                    range: {
-                                        'min': 40,
-                                        'max': 200
-                                    },
-                                    format: wNumb({
-                                        decimals: 0
-                                    })
-                                });
-                            </script>
-                            <script>
-                                $('#heart-rate-slider').Link('lower').to($('#heart-rate-reading'));
-                            </script>
-                        </div>
+                        <h3>Heart Rate <small><span id="heart-rate-reading"></span> BPM</small></h3>
+                        <div id="heart-rate-slider" class="slider shor slider-material-purple"></div>
+                        <span id="heart-rate-reading"></span>
+                        <script>
+                            $('#heart-rate-slider').noUiSlider({
+                                start: 100,
+                                connect: "lower",
+                                step: 1,
+                                range: {
+                                    'min': 40,
+                                    'max': 200
+                                },
+                                format: wNumb({
+                                    decimals: 0
+                                })
+                            });
+                        </script>
+                        <script>
+                            $('#heart-rate-slider').Link('lower').to($('#heart-rate-reading'));
+                        </script>
                     </div>
-                    <div class="col-md-6">
-                        <h1 class="header page-header">Vehicle</h1>
-                        <div class="sample1">
-                            <h3>Gasoline <small><span id="gasoline-reading"></span>% of Tank</small></h3>
-                            <div id="gasoline-slider" class="slider shor slider-material-cyan"></div>
-                            <span id="gasoline-reading"></span>
-                            <script>
-                                $('#gasoline-slider').noUiSlider({
-                                    start: 100,
-                                    connect: "lower",
-                                    step: 1,
-                                    range: {
-                                        'min': 0,
-                                        'max': 100
-                                    },
-                                    format: wNumb({
-                                        decimals: 0
-                                    })
-                                });
-                            </script>
-                            <script>
-                                $('#gasoline-slider').Link('lower').to($('#gasoline-reading'));
-                            </script>
+                </div>
+                <div class="col-md-6">
+                    <h1 class="header page-header">Vehicle</h1>
+                    <div class="sample1">
+                        <h3>Gasoline <small><span id="gasoline-reading"></span>% of Tank</small></h3>
+                        <div id="gasoline-slider" class="slider shor slider-material-cyan"></div>
+                        <span id="gasoline-reading"></span>
+                        <script>
+                            $('#gasoline-slider').noUiSlider({
+                                start: 100,
+                                connect: "lower",
+                                step: 1,
+                                range: {
+                                    'min': 0,
+                                    'max': 100
+                                },
+                                format: wNumb({
+                                    decimals: 0
+                                })
+                            });
+                        </script>
+                        <script>
+                            $('#gasoline-slider').Link('lower').to($('#gasoline-reading'));
+                        </script>
 
-                            <h3>Battery <small><span id="battery-reading"></span> Volts</small></h3>
-                            <div id="battery-slider" class="slider shor slider-material-teal"></div>
-                            <span id="battery-reading"></span>
-                            <script>
-                                $('#battery-slider').noUiSlider({
-                                    start: 12,
-                                    step: 0.5,
-                                    connect: "lower",
-                                    range: {
-                                        'min': 8,
-                                        'max': 16
-                                    },
-                                    format: wNumb({
+                        <h3>Battery <small><span id="battery-reading"></span> Volts</small></h3>
+                        <div id="battery-slider" class="slider shor slider-material-teal"></div>
+                        <span id="battery-reading"></span>
+                        <script>
+                            $('#battery-slider').noUiSlider({
+                                start: 12,
+                                step: 0.5,
+                                connect: "lower",
+                                range: {
+                                    'min': 8,
+                                    'max': 16
+                                },
+                                format: wNumb({
 
-                                    })
-                                });
-                            </script>
-                            <script>
-                                $('#battery-slider').Link('lower').to($('#battery-reading'));
-                            </script>
-                        </div>
+                                })
+                            });
+                        </script>
+                        <script>
+                            $('#battery-slider').Link('lower').to($('#battery-reading'));
+                        </script>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- SITE END -->
+        <!-- SITE END -->
 
-            <script>
-                var socket = io();
-                var users = 0;
-                console.log(users);
-                setInterval(function(){
-                    
-                    $('#userCount').load('/test');
+        <script>
+            var socket = io();
+            var users = 0;
+            console.log(users);
+            setInterval(function(){
+                
+                $('#userCount').load('/test');
 
-                }, 100);
+            }, 100);
 
-                var bac_threshold = 0.05;
-                var hr_threshold_low = 60;
-                var hr_threshold_high = 170;
-                var gas_threshold = 25;
-                var bat_threshold_low = 10;
-                var bat_threshold_high = 14;
-                setInterval(function(){
+            var bac_threshold = 0.05;
+            var hr_threshold_low = 60;
+            var hr_threshold_high = 170;
+            var gas_threshold = 25;
+            var bat_threshold_low = 10;
+            var bat_threshold_high = 14;
+            setInterval(function(){
 
-                    // SETTING UP NOTIFICATIONS FOR BLOOD PRESSURE
-                    var bac = $("#bac-slider").val();
-                    var bac_message = "A driver in your node is intoxicated."
-                    if (bac > bac_threshold) {
-                        socket.emit('alert', bac_message);
-                        $.snackbar({content: "Do not drive while intoxicated."});
-                    }
+                // SETTING UP NOTIFICATIONS FOR BLOOD ALCOHOL
+                var bac = $("#bac-slider").val();
+                var bac_message = "A driver in your node is intoxicated."
+                if (bac > bac_threshold) {
+                    socket.emit('alert', bac_message);
+                    $.snackbar({content: "Do not drive while intoxicated."});
+                }
 
-                    // SETTING UP NOTIFICATIONS FOR HEART RATE
-                    var heart_rate = $("#heart-rate-slider").val();
-                    var hr_message_low = "A driver in your node has a very low heart rate."
-                    var hr_message_high = "A driver in your node has a very high heart rate."
-                    if (heart_rate < hr_threshold_low) {
-                        socket.emit('alert', hr_message_low);
-                        $.snackbar({content: "Your heart rate is falling out of range (low)."});
-                    }
-                    if (heart_rate > hr_threshold_high) {
-                        socket.emit('alert', hr_message_high);
-                        $.snackbar({content: "Your heart rate is falling out of range (high)."});
-                    }
+                // SETTING UP NOTIFICATIONS FOR HEART RATE
+                var heart_rate = $("#heart-rate-slider").val();
+                var hr_message_low = "A driver in your node has a very low heart rate."
+                var hr_message_high = "A driver in your node has a very high heart rate."
+                if (heart_rate < hr_threshold_low) {
+                    socket.emit('alert', hr_message_low);
+                    $.snackbar({content: "Your heart rate is falling out of range (low)."});
+                }
+                if (heart_rate > hr_threshold_high) {
+                    socket.emit('alert', hr_message_high);
+                    $.snackbar({content: "Your heart rate is falling out of range (high)."});
+                }
 
-                    // SETTING UP NOTIFICATIONS FOR GASOLINE
-                    var gasoline = $("#gasoline-slider").val();
-                    var gas_message = "A driver in your node is low on gas."
-                    if (gasoline < gas_threshold) {
-                        socket.emit('alert', gas_message);
-                        $.snackbar({content: "Your vehicle is running out of gas."});
-                    }
+                // SETTING UP NOTIFICATIONS FOR GASOLINE
+                var gasoline = $("#gasoline-slider").val();
+                var gas_message = "A driver in your node is low on gas."
+                if (gasoline < gas_threshold) {
+                    socket.emit('alert', gas_message);
+                    $.snackbar({content: "Your vehicle is running out of gas."});
+                }
 
-                    // SETTING UP NOTIFICATIONS FOR BATTERY
-                    var battery = $("#battery-slider").val();
-                    var bat_message_low = "A vehicle in your node is having battery issues (low voltage)."
-                    var bat_message_high = "A vehicle in your node is having battery issues (high voltage)."
-                    if (battery < bat_threshold_low) {
-                        socket.emit('alert', bat_message_low);
-                        $.snackbar({content: "Check your battery (low voltage)."});
-                    }
-                    if(battery > bat_threshold_high) {
-                        socket.emit('alert', bat_message_high);
-                        $.snackbar({content: "Check your battery (high voltage)."});
-                    }
+                // SETTING UP NOTIFICATIONS FOR BATTERY
+                var battery = $("#battery-slider").val();
+                var bat_message_low = "A vehicle in your node is having battery issues (low voltage)."
+                var bat_message_high = "A vehicle in your node is having battery issues (high voltage)."
+                if (battery < bat_threshold_low) {
+                    socket.emit('alert', bat_message_low);
+                    $.snackbar({content: "Check your battery (low voltage)."});
+                }
+                if(battery > bat_threshold_high) {
+                    socket.emit('alert', bat_message_high);
+                    $.snackbar({content: "Check your battery (high voltage)."});
+                }
 
-                },10000);
+            },10000);
 
-                socket.on('alert', function(msg){
-                    $.snackbar({content: msg});
-                });
-            </script>
+            socket.on('alert', function(msg){
+                $.snackbar({content: msg});
+            });
+        </script>
 
-        </body>
-    </html>
+    </body>
+</html>
