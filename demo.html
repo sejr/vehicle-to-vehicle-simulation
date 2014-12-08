@@ -141,7 +141,6 @@
                     var blood_pressure = $("#blood-pressure-slider").val();
                     var message = "Your blood pressure is high."
                     if (blood_pressure > threshold) {
-                        ohSnap(message, 'red');
                         socket.emit('alert', message);
                     }
 
