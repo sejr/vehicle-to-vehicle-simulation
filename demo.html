@@ -129,12 +129,17 @@
             <script src="http://sjr.io/networking/js/material.min.js"></script>
 
             <script>
-
+                
                 var threshold = 75;
-                var blood_pressure = $("#blood-pressure-slider").val();
-                if (blood_pressure > threshold) {
-                    alert("This nigga has a high blood pressure!");
-                }
+                setInterval(function(){
+
+                    var blood_pressure = $("#blood-pressure-slider").val();
+                    var message = "Nearby: High blood pressure."
+                    if (blood_pressure > threshold) {
+                        alert(message);
+                    }
+
+                },2000);
 
             </script>
         </body>
