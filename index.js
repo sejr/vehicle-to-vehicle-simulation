@@ -20,6 +20,10 @@ io.on('connection', function(socket){
   socket.on('disconnect', function(){
     console.log('A user disconnected.');
   });
+  socket.on('alert', function(msg){
+  	console.log('An alert was emitted: ' + msg);
+  	io.emit('alert', msg);
+  });
 });
 
 http.listen(port, function(){
