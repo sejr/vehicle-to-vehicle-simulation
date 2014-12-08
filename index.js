@@ -18,7 +18,7 @@ app.get('/about', function(req, res){
 });
 
 app.get('/test', function(req, res) {
-	res.send('<span>Hosts connected: ' + connections + '</span>');
+	res.send('<span>Hosts: ' + connections + '</span>');
 });
 
 io.on('connection', function(socket){
